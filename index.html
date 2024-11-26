@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(198, 198, 198);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav ul li a:hover {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+
+        .left {
+            font-size: 23px;
+        }
+
+        .first-sec {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: 500;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.849);
+        }
+
+        .first-sec>div {
+            width: 40%;
+            color: grey;
+        }
+
+        .left-sec {
+            font-size: 25px;
+            /* margin: 30px 0;< */
+        }
+
+        .icn {
+            margin-top: 65px;
+            margin-left: 50px;
+        }
+
+        .left-sec .btn {
+            padding: 12px;
+            background-color: rgb(78, 9, 144);
+            color: white;
+            font-size: 18px;
+            border-radius: 6px;
+            border: 2px solid black;
+            cursor: pointer;
+            margin-top: 60px;
+
+        }
+
+        .button {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .right-sec img {
+            width: 80%;
+        }
+
+        .sec-left img {
+            width: 80%;
+        }
+
+        .sec-sec {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+        }
+
+        .sec-sec>div {
+            width: 40%;
+            color: grey;
+        }
+
+        .icon {
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .htm {
+            font-size: 45px;
+
+        }
+
+        .sec-right div {
+            font-size: 19px;
+        }
+
+        .lis ul li {
+            list-style: none;
+        }
+
+        .skill-right img {
+            padding-left: 50%;
+            /* width: 80%; */
+            width: 550px;
+            height: 300px;
+        }
+
+
+        .skill-left {
+            font-size: 23px;
+        }
+
+        .third-sec {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: 500;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.849);
+        }
+
+
+
+
+        .proficiency-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .proficiency {
+            width: 60%;
+        }
+
+        .proficiency h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .bar {
+            margin-bottom: 20px;
+        }
+
+        .bar label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .progress {
+            background-color: #eaeaea;
+            border-radius: 20px;
+            height: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #a16eff;
+            width: 0;
+            transition: width 2s ease;
+        }
+
+        .skills-right {
+            width: 40%;
+            text-align: center;
+        }
+
+        .skills-right img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .Contact {
+            background-color: white;
+            height: 833px;
+        }
+
+        .text-center {
+            color: black;
+            padding-top: 30px;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 45px;
+            border-color: rgb(95, 94, 94);
+        }
+
+        .form {
+            max-width: 62%;
+            margin: 25px auto;
+        }
+
+        .form-input {
+            margin: 14px 0;
+            padding: 5px 13px;
+            width: 100%;
+            font-size: 19px;
+            border: 2px solid grey;
+            border-radius: 6px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        footer {
+            background-color: whitesmoke;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .footer .footer-first>#logo {
+            width: 50%;
+            height: 80px;
+            border-radius: 50%;
+
+        }
+
+        .text-center h {
+            margin-left: 10px;
+        }
+
+        .btn-sm {
+            height: 40px;
+            font-size: 20px;
+            padding: 6px 10px;
+            vertical-align: middle;
+            background: none;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+
+        }
+
+        .btn-dark {
+
+            color: black;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Hrushikesh's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skillls">Skills</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first-sec">
+            <div class="left-sec">
+                <h3> Hii all Myself Hrishikesh &#128075;</h3>
+                <div>
+                    A Passionate Full Stack Developer &#128640; having an experience of building Web and Mobile
+                    Applications with Javascript/Reactjs/Nodejs/React Native and some other cool libraries and
+                    Frameworks
+                </div>
+                <div class="icn">
+                    <a href="https://github.com/Hrushikesh88"><i class="fa-brands fa-github fa-xl"
+                            style="color: #000000;"></i></a>
+                    <a href="https://www.linkedin.com/in/hrushikesh-bhople-full-stack-developer/"><i
+                            class="fa-brands fa-linkedin fa-xl" style="color: #0764ab;"></i></a>
+                    <a href="https://www.google.com/"><i class="fa-brands fa-google fa-xl"
+                            style="color: #ab0707;"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"
+                            style="color: #0f51c2;"></i></a>
+                </div>
+                <div class="button">
+                    <button class="btn" id="">CONTACT</button>
+                    <a href="Hrishikesh-Bhopale-FlowCV-Resume.pdf"> <button class="btn">SEE MY RESUME</button></a>
+                </div>
+
+            </div>
+            <div class="right-sec">
+                <img src="developer png.png" alt="">
+            </div>
+
+        </section>
+
+        <section class="sec-sec" id="about">
+            <div class="sec-left">
+                <img src="img.jpg" alt="">
+            </div>
+            <div class="sec-right">
+                <h3>What i do</h3>
+                <div>
+                    i am a passionate Full Stack Web Developer who likes to create website clones and intrested in to
+                    explore the Tech World.
+                </div>
+
+
+                <div class="icon">
+                    <i class="fa-brands htm fa-html5 " style="color: #5c5c5c;"></i>
+                    <i class="fa-brands htm fa-css3-alt " style="color: #5c5c5c;"></i>
+                    <i class="fa-brands htm fa-sass " style="color: #5c5c5c;"></i>
+                    <i class="fa-brands htm fa-js " style="color: #5c5c5c;"></i>
+                    <i class="fa-brands htm fa-react " style="color: #5c5c5c;"></i>
+                    <i class="fa-brands htm fa-node " style="color: #5c5c5c;"></i>
+                    <i class="fa-solid  htm fa-database " style="color: #5c5c5c;"></i>
+                    <i class="fa-brands htm fa-aws " style="color: #5c5c5c;"></i>
+                    <i class="fa-brands htm fa-python " style="color: #5c5c5c;"></i>
+                </div>
+
+
+                <div class="lis">
+                    <ul>
+                        <li><i class="fa-solid fa-bolt-lightning fa-sm" style="color: #FFD43B;"></i> Highly proficiency
+                            in Front-end / Database & Frameworks </li> <br>
+                        <li><i class="fa-solid fa-bolt-lightning fa-sm" style="color: #FFD43B;"></i> I have Strong
+                            Problem Solving skills</li> <br>
+                        <li><i class="fa-solid fa-bolt-lightning fa-sm" style="color: #FFD43B;"></i> Having Hands-on
+                            experience of using DSA,Front-end & Back-end</li> <br>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <section class="proficiency-container" id="skillls">
+            <div class="proficiency">
+                <h1>Proficiency</h1>
+                <div class="bar">
+                    <label>Frontend/Design</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <label>Backend</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <label>Programming</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-right">
+                <img src="skills.webp" alt="Skills Image">
+            </div>
+        </section>
+        <section class="Contact" id="contact">
+            <h2 class="text-center">Contact us</h2>
+            <div class="form">
+                <form action="https://formspree.io/f/mgejoekb" method="POST">
+                    <input class="form-input" type="text" name="name" id="name" placeholder="Enter Your Name">
+                    <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter Your Phone number">
+                    <input class="form-input" input="email" name="email" id="email" placeholder="Enter Your Email">
+                    <textarea class="form-input" type="text" id="text" cols="30" rows="10"
+                        placeholder="Ellaborate Your Concerns "></textarea>
+                    <button class="btn btn-sm btn-dark" id="submit" disabled>Submit</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <div class="footer-first">
+                    <img id="logo" src="https://t4.ftcdn.net/jpg/04/34/76/59/240_F_434765976_WEoscjYLyWRTZTs2s2t9h9SUKCAqIkqf.jpg">
+                    <h3> Hrushikesh's Portfolio</h3>
+
+                </div>
+                <div class="footer-second">
+                    <ul>
+                        <li>instagram</li>
+                        <li>whatsapp</li>
+                        <li>twitter</li>
+                        <li>telelgrem</li>
+                        <li>github</li>
+                    </ul>
+                </div>
+                <div class="footer-third">
+                    <ul>
+                        <li>instagram</li>
+                        <li>whatsapp</li>
+                        <li>twitter</li>
+                        <li>telelgrem</li>
+                        <li>github</li>
+                    </ul>
+                </div>
+                <div class="footer-fourth">
+                    <ul>
+                        <li>instagram</li>
+                        <li>whatsapp</li>
+                        <li>twitter</li>
+                        <li>telelgrem</li>
+                        <li>github</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-rights">
+                Copyright &#169; www.Hushikesh'sPortfolio.com | All rights are reserved
+            </div>
+
+            <div class="text-center">
+
+                <br>
+                <h1>
+                    <center>
+                        <a href="https://www.whatsapp.com/"> <i class="fa-brands fa-whatsapp fa-sm"
+                                style="color: #6ded4a;"></i></a>
+                        <a href="https://www.instagram.com//"> <i class="fa-brands fa-instagram fa-sm"
+                                style="color: #ff00ae;"></i></a>
+                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"> <i
+                                class="fa-brands fa-twitter fa-xs" style="color: #005eff;"></i></a>
+                        <a href="https://telegram.org/"> <i class="fa-brands fa-telegram fa-sm"
+                                style="color: #2e7bff;"></i></a>
+                        <a href="https://github.com"><i class="fa-brands fa-github fa-sm"
+                                style="color: #000000;"></i></a>
+                    </center>
+                </h1>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
